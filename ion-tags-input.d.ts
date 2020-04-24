@@ -1,0 +1,71 @@
+import { ChangeDetectorRef, EventEmitter, OnInit } from '@angular/core';
+import { ControlValueAccessor } from "@angular/forms";
+import { Platform } from '@ionic/angular';
+import * as ɵngcc0 from '@angular/core';
+export declare const CITY_PICKER_VALUE_ACCESSOR: any;
+export declare class IonTagsInput implements ControlValueAccessor, OnInit {
+    plt: Platform;
+    ref: ChangeDetectorRef;
+    _once: boolean;
+    mode: string;
+    readonly: boolean;
+    hideRemove: boolean;
+    maxTags: number;
+    placeholder: string;
+    type: string;
+    separatorStr: string;
+    canEnterAdd: boolean;
+    canBackspaceRemove: boolean;
+    verifyMethod: (tagSrt: string) => boolean;
+    color: string;
+    once: boolean | string;
+    onChange: EventEmitter<any>;
+    ionFocus: EventEmitter<any>;
+    ionBlur: EventEmitter<any>;
+    input: any;
+    _editTag: string;
+    _tags: Array<string>;
+    _isFocus: boolean;
+    _onChanged: Function;
+    _onTouched: Function;
+    cssColor: string;
+    constructor(plt: Platform, ref: ChangeDetectorRef);
+    ngOnInit(): void;
+    keyAddTag(): any;
+    separatorStrAddTag(): any;
+    keyRemoveTag(): any;
+    btnRemoveTag($index: number): any;
+    verifyTag(tagStr: string): boolean;
+    pushTag(tagStr: string): any;
+    removeTag($index: number): any;
+    isOnce(tagStr: string): boolean;
+    _click(ev: UIEvent): any;
+    blur(): any;
+    focus(): any;
+    writeValue(val: any): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setValue(val: any): any;
+    initMode(): any;
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<IonTagsInput>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<IonTagsInput, "ion-tags-input", never, {
+    "mode": "mode";
+    "readonly": "readonly";
+    "hideRemove": "hideRemove";
+    "maxTags": "maxTags";
+    "placeholder": "placeholder";
+    "type": "type";
+    "separatorStr": "separatorStr";
+    "canEnterAdd": "canEnterAdd";
+    "canBackspaceRemove": "canBackspaceRemove";
+    "color": "color";
+    "once": "once";
+    "verifyMethod": "verifyMethod";
+}, {
+    "onChange": "onChange";
+    "ionFocus": "ionFocus";
+    "ionBlur": "ionBlur";
+}, never>;
+}
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW9uLXRhZ3MtaW5wdXQuZC50cyIsInNvdXJjZXMiOlsiaW9uLXRhZ3MtaW5wdXQuZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7OztBQUdBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBNkNBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ2hhbmdlRGV0ZWN0b3JSZWYsIEV2ZW50RW1pdHRlciwgT25Jbml0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDb250cm9sVmFsdWVBY2Nlc3NvciB9IGZyb20gXCJAYW5ndWxhci9mb3Jtc1wiO1xuaW1wb3J0IHsgUGxhdGZvcm0gfSBmcm9tICdAaW9uaWMvYW5ndWxhcic7XG5leHBvcnQgZGVjbGFyZSBjb25zdCBDSVRZX1BJQ0tFUl9WQUxVRV9BQ0NFU1NPUjogYW55O1xuZXhwb3J0IGRlY2xhcmUgY2xhc3MgSW9uVGFnc0lucHV0IGltcGxlbWVudHMgQ29udHJvbFZhbHVlQWNjZXNzb3IsIE9uSW5pdCB7XG4gICAgcGx0OiBQbGF0Zm9ybTtcbiAgICByZWY6IENoYW5nZURldGVjdG9yUmVmO1xuICAgIF9vbmNlOiBib29sZWFuO1xuICAgIG1vZGU6IHN0cmluZztcbiAgICByZWFkb25seTogYm9vbGVhbjtcbiAgICBoaWRlUmVtb3ZlOiBib29sZWFuO1xuICAgIG1heFRhZ3M6IG51bWJlcjtcbiAgICBwbGFjZWhvbGRlcjogc3RyaW5nO1xuICAgIHR5cGU6IHN0cmluZztcbiAgICBzZXBhcmF0b3JTdHI6IHN0cmluZztcbiAgICBjYW5FbnRlckFkZDogYm9vbGVhbjtcbiAgICBjYW5CYWNrc3BhY2VSZW1vdmU6IGJvb2xlYW47XG4gICAgdmVyaWZ5TWV0aG9kOiAodGFnU3J0OiBzdHJpbmcpID0+IGJvb2xlYW47XG4gICAgY29sb3I6IHN0cmluZztcbiAgICBvbmNlOiBib29sZWFuIHwgc3RyaW5nO1xuICAgIG9uQ2hhbmdlOiBFdmVudEVtaXR0ZXI8YW55PjtcbiAgICBpb25Gb2N1czogRXZlbnRFbWl0dGVyPGFueT47XG4gICAgaW9uQmx1cjogRXZlbnRFbWl0dGVyPGFueT47XG4gICAgaW5wdXQ6IGFueTtcbiAgICBfZWRpdFRhZzogc3RyaW5nO1xuICAgIF90YWdzOiBBcnJheTxzdHJpbmc+O1xuICAgIF9pc0ZvY3VzOiBib29sZWFuO1xuICAgIF9vbkNoYW5nZWQ6IEZ1bmN0aW9uO1xuICAgIF9vblRvdWNoZWQ6IEZ1bmN0aW9uO1xuICAgIGNzc0NvbG9yOiBzdHJpbmc7XG4gICAgY29uc3RydWN0b3IocGx0OiBQbGF0Zm9ybSwgcmVmOiBDaGFuZ2VEZXRlY3RvclJlZik7XG4gICAgbmdPbkluaXQoKTogdm9pZDtcbiAgICBrZXlBZGRUYWcoKTogYW55O1xuICAgIHNlcGFyYXRvclN0ckFkZFRhZygpOiBhbnk7XG4gICAga2V5UmVtb3ZlVGFnKCk6IGFueTtcbiAgICBidG5SZW1vdmVUYWcoJGluZGV4OiBudW1iZXIpOiBhbnk7XG4gICAgdmVyaWZ5VGFnKHRhZ1N0cjogc3RyaW5nKTogYm9vbGVhbjtcbiAgICBwdXNoVGFnKHRhZ1N0cjogc3RyaW5nKTogYW55O1xuICAgIHJlbW92ZVRhZygkaW5kZXg6IG51bWJlcik6IGFueTtcbiAgICBpc09uY2UodGFnU3RyOiBzdHJpbmcpOiBib29sZWFuO1xuICAgIF9jbGljayhldjogVUlFdmVudCk6IGFueTtcbiAgICBibHVyKCk6IGFueTtcbiAgICBmb2N1cygpOiBhbnk7XG4gICAgd3JpdGVWYWx1ZSh2YWw6IGFueSk6IHZvaWQ7XG4gICAgcmVnaXN0ZXJPbkNoYW5nZShmbjogYW55KTogdm9pZDtcbiAgICByZWdpc3Rlck9uVG91Y2hlZChmbjogYW55KTogdm9pZDtcbiAgICBzZXRWYWx1ZSh2YWw6IGFueSk6IGFueTtcbiAgICBpbml0TW9kZSgpOiBhbnk7XG59XG4iXX0=
